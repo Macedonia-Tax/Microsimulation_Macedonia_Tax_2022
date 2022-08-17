@@ -93,7 +93,7 @@ def cal_ssc_inc_temp_fun(ssc_w, income_contract_l, ssc_rate, min_base_wage, max_
     Fourth condition:Case when gross income from wages is above maximum wages.
     note: income_wage_l = gross income for wages
     """
-    if (ssc_w > 0 and income_contract_l > 0):     #ssc in cases where wage income is non-zero but ssc as per data is zero is deemed zero
+    if (ssc_w == 0 and income_contract_l > 0):     #ssc in cases where wage income is non-zero but ssc as per data is zero is deemed zero
         cal_ssc_inc_temp_calc = 0
     elif (income_contract_l < min_base_wage):
         cal_ssc_inc_temp_calc = min_ssc
