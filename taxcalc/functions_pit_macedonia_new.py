@@ -106,13 +106,18 @@ def cal_ssc_inc_temp_fun(ssc_w, income_contract_l, ssc_rate, min_base_wage, max_
 
 "Calculation SSC with or without CAP"
 @iterate_jit(nopython=True)
-def cal_ssc_total(exclude_cap, ssc_w_rem_cap,ssc_w_calc,total_ssc_w):
+def cal_ssc_total_w(exclude_cap, ssc_w_rem_cap,ssc_w_calc,total_ssc_w):
      if exclude_cap == 1:
         total_ssc_w = ssc_w_rem_cap 
      else :
         total_ssc_w = ssc_w_calc
      return total_ssc_w
 
+"Calculation SSC with or without CAP"
+@iterate_jit(nopython=True)
+def cal_ssc_total(total_ssc_w):
+    sstax = total_ssc_w
+    return sstax
 
 "Calculation for personal allowance - default rate of personal allowance is 100%, which can be changed in reform"
 @iterate_jit(nopython=True)

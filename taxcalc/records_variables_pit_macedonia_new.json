@@ -618,6 +618,13 @@
         "2018": "pit_macedonia"
       }
     },
+    "sstax": {
+      "type": "float",
+      "desc": "Calculated Social Security Contributions computed as 0.2675 of Gross Income",
+      "form": {
+        "2018": "pit_macedonia"
+      }
+    },    
     "personal_allowance_new": {
       "type": "float",
       "desc": "Calculated personal allowance change (%) if personal allowance change is introduced",

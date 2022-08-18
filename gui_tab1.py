@@ -135,6 +135,10 @@ def initialize_vars(self):
     self.vars['pit_display_distribution_table_byincome'] = 0
     self.vars['pit_display_distribution_table_bydecile'] = 0
     self.vars['pit_display_revenue_table'] = 1
+
+    self.vars['sst_display_distribution_table_byincome'] = 0
+    self.vars['sst_display_distribution_table_bydecile'] = 0
+    self.vars['sst_display_revenue_table'] = 1
     
     self.vars['cit_display_distribution_table_byincome'] = 0
     self.vars['cit_display_distribution_table_bydecile'] = 0
