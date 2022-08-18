@@ -243,6 +243,9 @@ def generate_policy_revenues():
     df_tax1 = {}
     df_tax2 = {}
     title_header = {}
+    shift_x = 600
+    shift_y = 140    
+    shift = 400
     for tax_type in tax_list:
         revenue_dict[tax_type]={}
         dt1[tax_type] = {}
@@ -259,7 +262,9 @@ def generate_policy_revenues():
             revenue_dict[tax_type][year]={}
         if global_variables[tax_type+'_display_revenue_table']:
             window_dict[tax_type] = tk.Toplevel()
-            window_dict[tax_type].geometry("800x600+600+140")            
+            window_dict[tax_type].geometry("600x600+"+str(shift_x)+"+"+str(shift_y))       
+            shift_x = shift_x + shift
+            shift_y = shift_y
             #display_table(window, header=True)
             # Adjust this for number of years selected
             header = ["header","Year", "Current Law", "Reform", "Diff"]
